@@ -55,20 +55,6 @@ Mock.mock('/getLogin',
       "username": "李root",
       "password": "123456",
       "token": "65454634",
-     },
-     {
-      "id": '7',
-      "usertitle": "牛先生",
-      "username": "牛root",
-      "password": "123456",
-      "token": "65454634",
-     },
-     {
-      "id": '8',
-      "usertitle": "向先生",
-      "username": "向root",
-      "password": "123456",
-      "token": "65454634",
      }
     ]
   }
