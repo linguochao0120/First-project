@@ -16,55 +16,30 @@
       </div>
     </div>
     
-
-  
     <div id="nav_top">
-  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#545c64"
+  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect"  background-color="#545c64"
   text-color="#fff" active-text-color="#ffd04b">
 <el-menu-item index="1" style="font-size: 18px;"><router-link to="home" style="text-decoration: none;">首页</router-link></el-menu-item>
     <el-menu-item index="2" style="font-size: 18px;">事务追踪</el-menu-item>
     <el-menu-item index="3" style="font-size: 18px;"><router-link to="meeting" style="text-decoration: none;">会议中心</router-link></el-menu-item>
     <el-menu-item index="4" style="font-size: 18px;">工单管理</el-menu-item>
-    
   </el-menu>
   </div>
 
-  <div id="main" name="首页">
-    <h1>Tip</h1>
-    <img src="../assets/jiantou.png" class="m1">
-    <h3>事务相关：</h3>
-    <div class="M1">
-      <ul>
-        <li>可乐可乐可乐可乐可乐</li>
-        <li>雪碧雪碧雪碧雪碧雪碧</li>
-        <li>牛奶牛奶牛奶牛奶牛奶</li>
-        <li>苹果苹果苹果苹果苹果</li>
-        <li>香蕉香蕉香蕉香蕉香蕉</li>
-      </ul>
-      <p class="p1"><a href="#">more>></a></p>
+  <div id="main" name="会议中心">
+    <div id="nav_left">
+       <nav_left></nav_left>
     </div>
- <h3 class="gongdan">工单相关：</h3>
-    <div class="M2">
-      <ul>
-        <li>可乐可乐可乐可乐可乐</li>
-        <li>雪碧雪碧雪碧雪碧雪碧</li>
-        <li>牛奶牛奶牛奶牛奶牛奶</li>
-        <li>苹果苹果苹果苹果苹果</li>
-        <li>香蕉香蕉香蕉香蕉香蕉</li>
-      </ul>
-      <p class="p2"><a href="#">more>></a></p>
-    </div>
-
     </div>
 
 
     <div id="footer">
     </div>
-    </div>
+  </div>
 </template>
 
 <style>
- #container{
+  #container{
     width: 1100px;
     height: 675px;
     border: 2px solid black;
@@ -77,7 +52,7 @@
   #header{
     margin: 10px 0;
     padding: 0px;
-     border: 2px solid #87CEFA;
+    border: 2px solid #87CEFA;
     width: 1100px;
     height: 100px;
     margin-top: 30px;
@@ -118,7 +93,7 @@
   clear: both;
   float: right;
   margin-top: -45px;
-  margin-right: 25px;
+  margin-right: 20px;
   }
 .A2{
   height: 35px;
@@ -144,81 +119,19 @@
   border: 2px solid #87CEFA;
 }
 
-#main h1{
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-#main .m1{
-  float: left;
-  margin-top: 3px;
-}
-#main h3{
-  float: left;
-  margin-top: 35px;
-}
-.M1{
-  float: left;
-  border: 3px solid red;
-  margin-top: 35px;
-  width: 400px;
-  height: 145px;
-  margin-left: 20px;
-  border-radius: 30px;
-
-}
-.M1 ul{
-  float: left;
-}
-.M1 ul li{
-  font-family: "微软雅黑";
-  font-size: 17px;
-}
-.p1{
-  float: right;
-  margin-top: 125px;
-  margin-right: 25px;
-}
-.p1 a{
-  text-decoration: none;
-}
-.gongdan{
-  clear: both;
-  margin-left: 80px;
-}
-.M2{
-   border: 3px solid black;
-   width: 400px;
-   height: 145px;
-   margin-left: 195px;
-   border-radius: 30px;
-   margin-top: 220px;
-}
-.M2 ul{
-  float: left;
-}
-.M2 ul li{
-  font-family: "微软雅黑";
-  font-size: 17px;
-}
-.p2{
-  float: right;
-  margin-top: 125px;
-  margin-right: 25px;
-}
-.p2 a{
-  text-decoration: none;
-}
 </style>
 
-
 <script>
-import {getUserInfo} from '../request/api.js'
-export default {
-  data() {
+  import {getUserInfo} from '../request/api.js'
+  import nav_left from '../components/nav_left.vue'//引用组件
+  export default {
+   components:{
+     nav_left
+    },
+    data() {
       return {
-        activeIndex: '1',
-        activeIndex2: '1',
+        activeIndex: '3',
+        activeIndex2: '3'
       };
     },
     methods: {
@@ -226,6 +139,7 @@ export default {
         console.log(key, keyPath);
       }
     },
+  
   name: 'Home',
   data () {
     return {
@@ -244,6 +158,6 @@ export default {
       this.$store.dispatch('loginOut')
     }
   }
-  
-  }
+}
+
 </script>
