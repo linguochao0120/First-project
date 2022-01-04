@@ -9,20 +9,57 @@
       label-width="100px"
       class="demo-ruleForm"
     >
-      <el-form-item label="账号" prop="user">
+    <div class="title">
+    <p class="etheme"><b>事&nbsp;务&nbsp;管&nbsp;理&nbsp;系&nbsp;统</b><br>Transaction management system</p>
+    </div>
+      <el-form-item label="账号" prop="user" class="username">
         <el-input type="text" v-model="ruleForm.user" autocomplete="off"></el-input>
       </el-form-item>
-      <el-form-item label="密码" prop="pwd">
+      <br>
+      <el-form-item label="密码" prop="pwd" class="password">
         <el-input type="password" v-model="ruleForm.pwd" autocomplete="off" @keyup.enter.native="submitForm"></el-input>
       </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-        <el-button @click="resetForm('ruleForm')">重置</el-button>
+       <br>
+      <el-form-item class="login-buttom">
+        <el-button type="primary" @click="submitForm('ruleForm')" >登录</el-button>
       </el-form-item>
     </el-form>
   </div>
 </template>
 
+<style>
+#login{
+  border: 1px solid rgb(246, 248, 253);
+  width: 570px;
+  height: 280px;
+  margin: 0 auto;
+  background-color:whitesmoke;
+  margin-top: 10%;
+ 
+}
+.title{
+  border: 0px solid red;
+}
+.etheme{
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.etheme b{
+  font-size: 25px;
+}
+.username{
+  width: 500px;
+  padding-top: 25px;
+}
+.password{
+  width: 500px;
+  margin-top: -10px;
+}
+.login-buttom{
+  margin-left: -100px;
+  margin-top:-10px;
+}
+</style>
 <script>
 import { getLogin } from "../request/api.js";
 import axios from "axios";
