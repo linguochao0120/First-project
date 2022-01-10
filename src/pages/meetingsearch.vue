@@ -25,25 +25,16 @@
   </el-menu>
   </div>
 
-  <div id="main" name="会议中心">
     <div id="nav_left_1">
        <nav_left_1></nav_left_1>
     </div>
-   
-    <div class="query">
-     <b>主题</b><el-input v-model="input" placeholder="请输入会议名称" class="input1"></el-input>
-  </div>
-    </div>
-
+    
     <div id="footer">
     </div>
   </div>
 </template>
 
 <style>
-  ::-webkit-input-placeholder {
-    text-align:center;
-    }
   #container{
     width: 1100px;
     height: 675px;
@@ -112,7 +103,6 @@
   height: 390px;
   border: 2px solid #87CEFA;
 }
-
 #footer{
   margin: 10px 0;
   width: 1100px;
