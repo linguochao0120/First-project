@@ -19,20 +19,53 @@
     <div id="nav_top">
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect"  background-color="#545c64"
   text-color="#fff" active-text-color="#ffd04b">
-<el-menu-item index="1" style="font-size: 18px;"><router-link to="home" style="text-decoration: none;">首页</router-link></el-menu-item>
+     <el-menu-item index="1" style="font-size: 18px;"><router-link to="home" style="text-decoration: none;">首页</router-link></el-menu-item>
     <el-menu-item index="2" style="font-size: 18px;">事务追踪</el-menu-item>
     <el-menu-item index="3" style="font-size: 18px;"><router-link to="meeting" style="text-decoration: none;">会议中心</router-link></el-menu-item>
     <el-menu-item index="4" style="font-size: 18px;">工单管理</el-menu-item>
   </el-menu>
   </div>
 
-  <div id="main" name="会议中心">
-    <div id="nav_left">
-       <nav_left></nav_left>
-    </div>
-    <div id="calendal">
-      <calendar></calendar>
-    </div>
+<div id="nav-left">
+<el-row class="tac">
+  <el-col>
+    <el-menu
+      default-active="1"
+      class="el-menu-vertical-demo"
+      @open="handleOpen"
+      @close="handleClose">
+
+      <router-link to="meeting" style="text-decoration: none">
+        <el-menu-item index="1">
+        <i class="el-icon-date"></i>
+        <span slot="title">会议日历</span>
+      </el-menu-item>
+     </router-link>
+
+      <el-menu-item index="2">
+        <i class="el-icon-edit-outline"></i>
+        <span slot="title" class="meet">预约会议</span>
+      </el-menu-item>
+
+    <router-link to="meetingsearch" style="text-decoration: none">
+      <el-menu-item index="3">
+          <i class="el-icon-search"></i>
+        <span slot="title">查询会议</span>
+      </el-menu-item>
+   </router-link>
+
+      <el-menu-item index="4">
+        <i class="el-icon-monitor"></i>
+        <span slot="title">会议室</span>
+      </el-menu-item>
+
+    </el-menu>
+  </el-col>
+</el-row>
+</div>
+
+  <div id="main-right">
+    <calendar></calendar>
     </div>
 
     <div id="footer">
@@ -55,7 +88,7 @@
     margin: 10px 0;
     padding: 0px;
     border: 2px solid #87CEFA;
-    width: 1100px;
+    width: 1096px;
     height: 100px;
     margin-top: 30px;
     border-radius:10px;
@@ -102,34 +135,61 @@
 }
 
 #nav_top{
-  width: 1104px;
+  width: 1100px;
   margin: 6px 0;
   border: 0px solid #87CEFA;
   height: 60px;
   border-radius:5px;
 }
-#main{
+.tac{
+  border: 2px solid #87CEFA;
+  width: 180px;
+  height: 394px;
+  margin: 0;
+  padding: 0;
+  margin-top:-40px;
+}
+.tac span{
+  margin: 10px;
+  font-family: '微软雅黑';
+  font-size: 18px;
+}
+#nav-left{
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+  float: left;
+  
+}
+#main-right{
   margin: 10px 0;
-  width: 1100px;
+  width: 896px;
   height: 390px;
   border: 2px solid #87CEFA;
+  float: right;
+  margin-left: 20px;
 }
 #footer{
   margin: 10px 0;
-  width: 1100px;
+  width: 1096px;
   height: 40px;
   border: 2px solid #87CEFA;
+  clear: both;
 }
 
 </style>
 
 <script>
   import {getUserInfo} from '../request/api.js'
-  import nav_left from '../components/nav_left.vue'//引用组件
+  // import nav_left from '../components/nav_left.vue'//引用组件
+  import calendar from '../components/calendar.vue'
   export default {
-   components:{
-     nav_left
-    },
+  //  components:{
+  //    nav_left
+  //   },
+  components:{
+      calendar
+  },
     data() {
       return {
         activeIndex: '3',
@@ -159,7 +219,15 @@
     loginOut(){
       this.$store.dispatch('loginOut')
     }
-  }
+  },
+   methods: {
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
+      }
+    }
 }
 
 </script>

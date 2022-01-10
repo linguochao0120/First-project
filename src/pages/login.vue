@@ -61,8 +61,10 @@
 }
 </style>
 <script>
-import { getLogin } from "../request/api.js";
-import axios from "axios";
+
+import { getLogin } from "../request/api.js"
+import axios from "axios"
+
 export default {
   name: "Login",
   data() {

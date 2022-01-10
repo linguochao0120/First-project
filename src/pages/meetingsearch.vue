@@ -5,6 +5,7 @@
       <div class="logo">
     <img src="../assets/logo.jpg" alt="logo">
     </div>
+
     <div class="theme">
     <h1>浙江泰嘉光电MIT中心事务管理系统</h1>
      <div class="user">
@@ -25,10 +26,48 @@
   </el-menu>
   </div>
 
-    <div id="nav_left_1">
-       <nav_left_1></nav_left_1>
-    </div>
+<div id="nav-left">
+<el-row class="tac">
+  <el-col>
+    <el-menu
+      default-active="3"
+      class="el-menu-vertical-demo"
+      @open="handleOpen"
+      @close="handleClose">
+      
+     <router-link to="meeting" style="text-decoration: none">
+        <el-menu-item index="1">
+        <i class="el-icon-date"></i>
+        <span slot="title">会议日历</span>
+      </el-menu-item>
+     </router-link>
     
+      <el-menu-item index="2">
+        <i class="el-icon-edit-outline"></i>
+        <span slot="title" class="meet">预约会议</span>
+      </el-menu-item>
+
+    <router-link to="meetingsearch" style="text-decoration: none">
+      <el-menu-item index="3">
+          <i class="el-icon-search"></i>
+        <span slot="title">查询会议</span>
+      </el-menu-item>
+   </router-link>
+
+      <el-menu-item index="4">
+        <i class="el-icon-monitor"></i>
+        <span slot="title">会议室</span>
+      </el-menu-item>
+
+    </el-menu>
+  </el-col>
+</el-row>
+</div>
+
+  <div id="main-right">
+  <timeframe></timeframe>
+    </div>
+
     <div id="footer">
     </div>
   </div>
@@ -42,15 +81,20 @@
     margin: 0 auto;
     padding: 0 30px;
     margin-top: -30px;
+
+
   }
   #header{
     margin: 10px 0;
     padding: 0px;
     border: 2px solid #87CEFA;
-    width: 1100px;
+    width: 1096px;
     height: 100px;
     margin-top: 30px;
     border-radius:10px;
+
+
+
   }
 .logo{
     float: left;
@@ -91,36 +135,61 @@
 }
 
 #nav_top{
-  width: 1104px;
+  width: 1100px;
   margin: 6px 0;
   border: 0px solid #87CEFA;
   height: 60px;
   border-radius:5px;
 }
-#main{
+.tac{
+  border: 2px solid #87CEFA;
+  width: 180px;
+  height: 394px;
+  margin: 0;
+  padding: 0;
+  margin-top:-40px;
+}
+.tac span{
+  margin: 10px;
+  font-family: '微软雅黑';
+  font-size: 18px;
+}
+#nav-left{
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+  float: left;
+  
+}
+#main-right{
   margin: 10px 0;
-  width: 1100px;
+  width: 896px;
   height: 390px;
   border: 2px solid #87CEFA;
+  float: right;
+  margin-left: 20px;
 }
 #footer{
   margin: 10px 0;
-  width: 1100px;
+  width: 1096px;
   height: 40px;
   border: 2px solid #87CEFA;
+  clear: both;
 }
 
 </style>
 
 <script>
   import {getUserInfo} from '../request/api.js'
-  import nav_left_1 from '../components/nav_left_1.vue'//引用组件
-
+  // import nav_left from '../components/nav_left.vue'//引用组件
+  import timeframe from '../components/timeframe.vue'
   export default {
- components:{
-   nav_left_1
- },
-
+  //  components:{
+  //    nav_left
+  //   },
+  components:{
+    timeframe
+  },
     data() {
       return {
         activeIndex: '3',
@@ -150,7 +219,15 @@
     loginOut(){
       this.$store.dispatch('loginOut')
     }
-  }
+  },
+   methods: {
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
+      }
+    }
 }
 
 </script>

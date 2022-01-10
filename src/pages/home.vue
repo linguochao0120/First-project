@@ -78,7 +78,7 @@
     margin: 10px 0;
     padding: 0px;
      border: 2px solid #87CEFA;
-    width: 1100px;
+    width: 1096px;
     height: 100px;
     margin-top: 30px;
     border-radius:10px;
@@ -125,7 +125,7 @@
 }
 
 #nav_top{
-  width: 1104px;
+  width: 1100px;
   margin: 6px 0;
   border: 0px solid #87CEFA;
   height: 60px;
@@ -133,13 +133,13 @@
 }
 #main{
   margin: 10px 0;
-  width: 1100px;
+  width: 1096px;
   height: 390px;
   border: 2px solid #87CEFA;
 }
 #footer{
   margin: 10px 0;
-  width: 1100px;
+  width: 1096px;
   height: 40px;
   border: 2px solid #87CEFA;
 }
@@ -247,3 +247,7 @@ export default {
   
   }
 </script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+
