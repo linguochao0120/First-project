@@ -3,7 +3,7 @@
     <div id="header">
 
       <div class="logo">
-    <img src="#" alt="logo">
+    <img src="../assets/logo.jpg" alt="logo">
     </div>
 
     <div class="theme">
@@ -31,7 +31,7 @@
 
   <div id="main" name="首页">
     <h1>Tip</h1>
-    <img src="../assets/jiantou.png" class="m1">
+    <img src="../assets/jiantou1.png" class="m1">
     <h3>事务相关：</h3>
     <div class="M1">
       <ul>
@@ -89,10 +89,10 @@
 .logo{
     float: left;
     width: 120px;
-    height: 60px;
+    height: 65px;
     border: 2px solid #87CEFA;
     margin-left: 40px;
-    margin-top: 20px;
+    margin-top: 18px;
     border-radius:10px;
   }
 .theme{
@@ -151,7 +151,7 @@
 }
 #main .m1{
   float: left;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 #main h3{
   float: left;

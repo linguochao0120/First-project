@@ -2,14 +2,14 @@
 import Mock from 'mockjs'
 const Random = Mock.Random
 //home页面的表格数据
-Mock.mock('/getUser',{
-    'data|3': [{
-        'name': Random.cname(),
-        'age': Random.natural(22, 40),
-        'date': Random.date('yyyy-MM-dd'),
-        'address': Random.county(true)
-      }]
-})
+// Mock.mock('/getUser',{
+//     'data|3': [{
+//         'name': Random.cname(),
+//         'age': Random.natural(22, 40),
+//         'date': Random.date('yyyy-MM-dd'),
+//         'address': Random.county(true)
+//       }]
+// })
 //登录数据
 Mock.mock('/getLogin',
   {

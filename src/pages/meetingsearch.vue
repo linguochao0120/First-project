@@ -5,7 +5,6 @@
       <div class="logo">
     <img src="../assets/logo.jpg" alt="logo">
     </div>
-
     <div class="theme">
     <h1>浙江泰嘉光电MIT中心事务管理系统</h1>
      <div class="user">
@@ -27,14 +26,14 @@
   </div>
 
   <div id="main" name="会议中心">
-    <div id="nav_left">
-       <nav_left></nav_left>
+    <div id="nav_left_1">
+       <nav_left_1></nav_left_1>
     </div>
-    <div id="calendal">
-      <calendar></calendar>
+   
+    <div class="query">
+     <b>主题</b><el-input v-model="input" placeholder="请输入会议名称" class="input1"></el-input>
+  </div>
     </div>
-    </div>
-
 
     <div id="footer">
     </div>
@@ -42,6 +41,9 @@
 </template>
 
 <style>
+  ::-webkit-input-placeholder {
+    text-align:center;
+    }
   #container{
     width: 1100px;
     height: 675px;
@@ -49,8 +51,6 @@
     margin: 0 auto;
     padding: 0 30px;
     margin-top: -30px;
-
-
   }
   #header{
     margin: 10px 0;
@@ -60,9 +60,6 @@
     height: 100px;
     margin-top: 30px;
     border-radius:10px;
-
-
-
   }
 .logo{
     float: left;
@@ -115,6 +112,7 @@
   height: 390px;
   border: 2px solid #87CEFA;
 }
+
 #footer{
   margin: 10px 0;
   width: 1100px;
@@ -126,11 +124,13 @@
 
 <script>
   import {getUserInfo} from '../request/api.js'
-  import nav_left from '../components/nav_left.vue'//引用组件
+  import nav_left_1 from '../components/nav_left_1.vue'//引用组件
+
   export default {
-   components:{
-     nav_left
-    },
+ components:{
+   nav_left_1
+ },
+
     data() {
       return {
         activeIndex: '3',
