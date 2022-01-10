@@ -55,15 +55,8 @@
     min-height: 400px;
   }
 </style>
-
-
 <script>
   export default {
-    data() {
-      return {
-        isCollapse: true
-      };
-    },
     methods: {
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
