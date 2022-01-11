@@ -1,6 +1,6 @@
 <template>
   <div class="block">
-    <span class="demonstration">时间范围&nbsp;</span>
+    <span class="demonstration"><b>时间范围</b>&nbsp;</span>
     <el-date-picker
       v-model="value2"
       type="daterange"
@@ -22,7 +22,7 @@
 .block{
     float: right;
     margin-top: 15px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 </style>

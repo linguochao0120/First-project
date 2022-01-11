@@ -35,22 +35,22 @@
     <h3>事务相关：</h3>
     <div class="M1">
       <ul>
-        <li>可乐可乐可乐可乐可乐</li>
-        <li>雪碧雪碧雪碧雪碧雪碧</li>
-        <li>牛奶牛奶牛奶牛奶牛奶</li>
-        <li>苹果苹果苹果苹果苹果</li>
-        <li>香蕉香蕉香蕉香蕉香蕉</li>
+       <li><a href="#">DCC二阶文档制定</a></li>
+       <li><a href="#">EAS运营案的深化设计及讨论</a></li>
+       <li><a href="#">项目验收流程的配合推动完善</a></li>
+       <li><a href="#">事务管理系统建设</a></li>
+       <li><a href="#">培训平台、E-HR组织架构拉通及数据导入方案</a></li>
       </ul>
       <p class="p1"><a href="#">more>></a></p>
     </div>
  <h3 class="gongdan">工单相关：</h3>
     <div class="M2">
       <ul>
-        <li>可乐可乐可乐可乐可乐</li>
-        <li>雪碧雪碧雪碧雪碧雪碧</li>
-        <li>牛奶牛奶牛奶牛奶牛奶</li>
-        <li>苹果苹果苹果苹果苹果</li>
-        <li>香蕉香蕉香蕉香蕉香蕉</li>
+       <li><a href="#">DCC二阶文档制定</a></li>
+       <li><a href="#">EAS运营案的深化设计及讨论</a></li>
+       <li><a href="#">项目验收流程的配合推动完善</a></li>
+       <li><a href="#">事务管理系统建设</a></li>
+       <li><a href="#">培训平台、E-HR组织架构拉通及数据导入方案</a></li>
       </ul>
       <p class="p2"><a href="#">more>></a></p>
     </div>
@@ -161,8 +161,8 @@
   float: left;
   border: 3px solid red;
   margin-top: 35px;
-  width: 400px;
-  height: 145px;
+  width: 480px;
+  height: 150px;
   margin-left: 20px;
   border-radius: 30px;
 
@@ -173,6 +173,7 @@
 .M1 ul li{
   font-family: "微软雅黑";
   font-size: 17px;
+  text-align: left;
 }
 .p1{
   float: right;
@@ -188,9 +189,9 @@
 }
 .M2{
    border: 3px solid black;
-   width: 400px;
-   height: 145px;
-   margin-left: 195px;
+   width: 480px;
+   height: 150px;
+   margin-left: 188px;
    border-radius: 30px;
    margin-top: 220px;
 }
@@ -200,6 +201,7 @@
 .M2 ul li{
   font-family: "微软雅黑";
   font-size: 17px;
+  text-align: left;
 }
 .p2{
   float: right;

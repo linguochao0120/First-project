@@ -65,7 +65,12 @@
 </div>
 
   <div id="main-right">
+    <div class="theme1">
+   <b>主题</b>&nbsp;&nbsp;<input type="" name="" id="" value="" /><button>搜索</button>
+    </div>
+    <div class="timeframe">
   <timeframe></timeframe>
+  </div>
     </div>
 
     <div id="footer">
@@ -74,6 +79,7 @@
 </template>
 
 <style>
+
   #container{
     width: 1100px;
     height: 675px;
@@ -168,6 +174,37 @@
   border: 2px solid #87CEFA;
   float: right;
   margin-left: 20px;
+}
+.theme1{
+   float: left;
+   margin-top: 15px;
+   margin-left: 40px;
+}
+.theme1 b{
+  font-size: 18px;
+  font-family: '微软雅黑';
+
+}
+.theme1 input{
+   width: 180px;
+   height: 35px;
+   border: 1px solid rgb(212, 210, 210);
+   border-radius: 4px;
+}
+.theme1 button{
+  position: relative;
+  right: -4px;
+  top:1px;
+  width: 50px;
+  height: 40px;
+  font-size: 14px;
+  color:white;
+  background: #7FCC0B;
+  border: 0;
+  border-radius: 4px;
+}
+.timeframe{
+  float:right;
 }
 #footer{
   margin: 10px 0;
